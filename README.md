@@ -22,10 +22,115 @@ This repository contains three main notebooks:
 3. **High-Level Implementation with Diffusers**
 	- Practical usage and customization of diffusion models using the Hugging Face `diffusers` library.
 
+## Requirements
+- **Python:** 3.13 or higher
+- **GPU:** CUDA-compatible GPU recommended for faster training (CUDA 12.9 support included)
+- **Memory:** At least 8GB RAM (16GB+ recommended for larger models)
+
+## Setup Instructions
+
+### Option 1: Using uv (Recommended)
+This project uses [uv](https://docs.astral.sh/uv/) as the package manager for faster and more reliable dependency management.
+
+1. **Install uv** (if not already installed):
+   ```bash
+   # On Windows (PowerShell)
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+   
+   # On macOS/Linux
+   curl -LsSf https://astral.sh/uv/install.sh | sh
+   ```
+
+2. **Clone this repository:**
+   ```bash
+   git clone https://github.com/InsightLab/diffusion_models_course.git
+   cd diffusion_models_course
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   uv sync
+   ```
+
+4. **Activate the environment:**
+   ```bash
+   # On Windows
+   .venv\Scripts\activate
+   
+   # On macOS/Linux
+   source .venv/bin/activate
+   ```
+
+### Option 2: Using pip and venv
+If you prefer using traditional Python tools:
+
+1. **Clone this repository:**
+   ```bash
+   git clone https://github.com/InsightLab/diffusion_models_course.git
+   cd diffusion_models_course
+   ```
+
+2. **Create a virtual environment:**
+   ```bash
+   python -m venv venv
+   
+   # Activate it
+   # On Windows
+   venv\Scripts\activate
+   
+   # On macOS/Linux
+   source venv/bin/activate
+   ```
+
+3. **Install PyTorch with CUDA support:**
+   ```bash
+   pip install torch torchvision --index-url https://download.pytorch.org/whl/cu129
+   ```
+
+4. **Install other dependencies:**
+   ```bash
+   pip install matplotlib seaborn tqdm
+   ```
+
 ## Getting Started
-- Clone this repository.
-- Open the notebooks in your preferred Jupyter environment.
-- Follow the instructions in each notebook to run the code and explore diffusion models.
+
+### Running the Notebooks
+1. **Start Jupyter:**
+   ```bash
+   # Make sure your environment is activated
+   jupyter notebook
+   # or
+   jupyter lab
+   ```
+
+2. **Open and run the notebooks:**
+   - `ddpm_from_scratch.ipynb` - DDPM implementation from scratch
+   - `ncsn_from_scratch.ipynb` - Score-based model from scratch  
+   - `diffusers_high_level.ipynb` - High-level implementation with Diffusers
+
+3. **Follow the instructions** in each notebook to run the code and explore diffusion models.
+
+### Project Structure
+```
+diffusion_models_course/
+├── models/                 # Model implementations
+│   ├── ddpm.py            # DDPM model architecture
+│   └── ncsn.py            # NCSN model architecture
+├── weights/               # Pre-trained model weights
+├── samples/              # Generated sample images
+├── data/                 # Dataset storage (MNIST)
+└── *.ipynb              # Jupyter notebooks
+```
+
+### GPU Support
+The project is configured to use CUDA 12.9. If you have a different CUDA version or want CPU-only execution:
+- For different CUDA versions, modify the PyTorch installation command
+- For CPU-only: remove the `--index-url` parameter when installing PyTorch
+
+### Troubleshooting
+- **CUDA issues:** Ensure your GPU drivers are up to date
+- **Memory issues:** Reduce batch sizes in the notebooks if you encounter OOM errors
+- **uv not found:** Make sure uv is properly installed and added to your PATH
 
 ## License
 See the LICENSE file for details.
