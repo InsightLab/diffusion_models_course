@@ -208,3 +208,5 @@ __marimo__/
 
 data
 samples
+my_model
+my_scheduler
