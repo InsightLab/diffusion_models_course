@@ -3,11 +3,7 @@
 
 Welcome to the repository for the **Diffusion Models Minicourse** presented at the Simpósio Brasileiro de Banco de Dados (SBBD) 2025.
 
-## About the Minicourse
-- **Event:** SBBD (Simpósio Brasileiro de Banco de Dados) 2025
-- **Duration:** 4 hours
-- **Paper:** A written paper accompanies this minicourse and is currently awaiting publication.
-- **Presentation:** The minicourse includes a presentation in the format of slides.
+The **Diffusion Models Minicourse** will be presented at SBBD (Simpósio Brasileiro de Banco de Dados) 2025. This 4-hour session includes a written paper (currently awaiting publication) and a slide-based presentation.
 
 ## Repository Purpose
 The main content of this repository is to provide the hands-on part of the minicourse. You will find practical Jupyter Notebooks that guide you through the implementation and experimentation with diffusion models.
@@ -113,13 +109,14 @@ If you prefer using traditional Python tools:
 ### Project Structure
 ```
 diffusion_models_course/
-├── models/                 # Model implementations
-│   ├── ddpm.py            # DDPM model architecture
-│   └── ncsn.py            # NCSN model architecture
-├── weights/               # Pre-trained model weights
+├── models/               # Model implementations
+│   ├── ddpm.py           # DDPM model architecture
+│   └── ncsn.py           # NCSN model architecture
+├── weights/              # Pre-trained model weights
 ├── samples/              # Generated sample images
 ├── data/                 # Dataset storage (MNIST)
-└── *.ipynb              # Jupyter notebooks
+├── pyproject.toml        # Project metadata and dependencies
+└── *.ipynb               # Jupyter notebooks
 ```
 
 ### GPU Support
@@ -133,4 +130,4 @@ The project is configured to use CUDA 12.9. If you have a different CUDA version
 - **uv not found:** Make sure uv is properly installed and added to your PATH
 
 ## License
-See the LICENSE file for details.
+See the [LICENSE](LICENSE) file for details.
