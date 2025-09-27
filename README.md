@@ -15,8 +15,8 @@ This repository contains three main notebooks:
 	- Step-by-step implementation of a denoising diffusion probabilistic model (DDPM) from scratch.
 2. **From Scratch: Score-Based Model**
 	- Step-by-step implementation of a score-based generative model from scratch.
-3. **High-Level Implementation with Diffusers**
-	- Practical usage and customization of diffusion models using the Hugging Face `diffusers` library.
+3. **Inference Implementation with Diffusers**
+	- Practical usage of diffusion models using the Hugging Face `diffusers` library.
 
 ## Requirements
 - **Python:** 3.13 or higher
@@ -102,7 +102,7 @@ If you prefer using traditional Python tools:
 2. **Open and run the notebooks:**
    - `ddpm_from_scratch.ipynb` - DDPM implementation from scratch
    - `ncsn_from_scratch.ipynb` - Score-based model from scratch  
-   - `diffusers_high_level.ipynb` - High-level implementation with Diffusers
+   - `hugging_face_diffusers.ipynb` - High-level inference implementation with Diffusers
 
 3. **Follow the instructions** in each notebook to run the code and explore diffusion models.
 
