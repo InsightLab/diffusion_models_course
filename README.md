@@ -6,7 +6,8 @@ Welcome to the repository for the **Diffusion Models Minicourse** presented at t
 The **Diffusion Models Minicourse** will be presented at SBBD (Simpósio Brasileiro de Banco de Dados) 2025. This 4-hour session includes a written paper (currently awaiting publication) and a slide-based presentation.
 
 ## Materials
-- Published chapter: https://books-sol.sbc.org.br/index.php/sbc/catalog/book/179
+- Published chapter: https://books-sol.sbc.org.br/index.php/sbc/catalog/view/179/791/1547 
+   - DOI: https://doi.org/10.5753/sbc.17956.8.1
 - Slides: https://docs.google.com/presentation/d/1obWOI-vrOl7_5cF3OsFMdRx_SCOhu-veGGYFOEHgj1o/edit?usp=sharing
 
 ## Repository Purpose
